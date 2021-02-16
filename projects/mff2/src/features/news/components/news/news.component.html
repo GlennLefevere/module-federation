@@ -1,0 +1,4 @@
+<div class="container-boxed mt-4">
+  <app-news-item *ngFor="let news of (news$ | async)" [news]="news" (newsClicked)="onNewsItemClicked($event)" class="col-span-4 mb-4">
+  </app-news-item>
+</div>

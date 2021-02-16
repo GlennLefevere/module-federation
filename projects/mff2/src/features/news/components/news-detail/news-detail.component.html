@@ -1,0 +1,8 @@
+<lds-title-bar [titleName]="(news$ | async).title" (breadcrumbClicked)="onBreadcrumbClicked()" breadcrumb="back" class="container-boxed">
+
+</lds-title-bar>
+
+<div class="container-boxed mt-4">
+  <app-news-item [news]="news$ | async" full="false" class="col-span-12 mb-4">
+  </app-news-item>
+</div>

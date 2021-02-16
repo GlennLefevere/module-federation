@@ -1,0 +1,10 @@
+<div class="flex">
+  <lds-card class="padding-16">
+    <div class="news-item-container">
+      <img [src]="getSanitizedImageSrc()" alt="{{news?.title}}" *ngIf="!!news.imageSrc"/>
+      <h3 class="my-2" *ngIf="!full">{{news?.title}}</h3>
+      <p [class.news-content]="!full" [class.mt-2]="full">{{news?.content}}</p>
+      <a href="javascript:" (click)="onMoreClicked($event)" *ngIf="!full">Meer</a>
+    </div>
+  </lds-card>
+</div>
